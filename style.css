@@ -1,0 +1,277 @@
+/* General Styles */
+body {
+    background-color: rgb(56, 56, 62);
+    color: azure;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.welcome-container {
+    position: relative;
+    bottom: 45vh;
+    transition: opacity 0.5s ease;
+}
+
+.form-container {
+    width: 43%;
+    background-color: rgb(117, 117, 125);
+    padding: 1.5rem;
+    border: 0.5rem solid rgb(34, 33, 33);
+    border-radius: 1.5rem;
+    position: absolute;
+    transition: opacity 0.5s ease;
+}
+
+.input-container {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #dad7d7;
+    color: black;
+    padding: 0.5rem;
+    border: 0.1rem solid black;
+    border-radius: 0.5rem;
+}
+
+label,
+input {
+    cursor: text;
+}
+
+.timer-container {
+    width: 43%;
+    background-color: rgb(117, 117, 125);
+    padding: 1.5rem;
+    border: 0.5rem solid rgb(34, 33, 33);
+    border-radius: 1.5rem;
+    position: absolute;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.5s ease;
+}
+
+#time-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.display-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.5s ease;
+}
+
+#start-display,
+#end-display {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#start-button {
+    background-color: rgb(161, 54, 42);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#start-button:hover {
+    background-color: rgb(142, 41, 30);
+}
+
+#reset-button {
+    background-color: rgb(231, 76, 60);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    bottom: 45vh;
+}
+
+#reset-button:hover {
+    background-color: rgb(192, 57, 43);
+}
+
+.countdown-heading {
+    font-size: 2em;
+    margin-bottom: 1em;
+    text-align: center;
+    transition: font-size 1s ease;
+}
+
+h2 {
+    font-size: 1.4em;
+    margin-bottom: 1em;
+    transition: font-size 1s ease;
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.countdown div {
+    padding: 1.8rem;
+    background-color: #dad7d7;
+    border-radius: 5px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 2.5rem;
+}
+
+span {
+    font-size: xx-large;
+    text-align: center;
+}
+
+.progress-container {
+    background-color: white;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: rgb(136, 212, 21);
+    width: 0%;
+    height: 100%;
+    transition: width 1s ease-in-out;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1019.20px) {
+    #start-display, #end-display {
+        width: 20%;
+    }
+}
+
+/* Medium screens */
+@media (max-width: 800px) {
+    .form-container,
+    .timer-container {
+        width: 70%;
+    }
+
+    .countdown div {
+        padding: 1.5rem;
+    }
+
+    .display-header {
+        gap: 0.5rem;
+    }
+
+    #start-display, #end-display {
+        position: relative;
+        bottom: 45vh;
+    }
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+    .form-container,
+    .timer-container {
+        width: 80%;
+        padding: 1rem;
+    }
+
+    #start-display, #end-display {
+        font-size: 0.8rem;
+    }
+
+    /* .display-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    #reset-button {
+        position: static;
+    } */
+
+    .welcome-message {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 435px) {
+    #start-display, #end-display {
+        font-size: 0.6rem;
+    }
+}
+
+/* Extra-small screens */
+@media (max-width: 400px) {
+    .welcome-message {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .instruction{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .note{
+        font-size: 0.6rem;
+        text-align: center;
+    }
+
+    .countdown div {
+        width: 2rem;
+        padding: 1rem;
+    }
+
+    span {
+        font-size: large;
+    }
+
+    .progress-container {
+        height: 8px;
+    }
+
+    .progress-bar {
+        border-radius: 3px;
+    }
+}
+
+/* Minimal screens */
+@media (max-width: 300px) {
+    #start-display, #end-display {
+        font-size: 0.55rem;
+    }
+
+    #reset-button {
+        padding: 0.5rem 1rem;
+    }
+
+    .input-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+}

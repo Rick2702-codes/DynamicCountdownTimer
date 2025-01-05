@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="welcome-container">
+        <h1 class="welcome-message">
+            Welcome to Dynamic Countdown Timer!
+        </h1>
+    </div>
+    <div class="display-header">
+        <span id="start-display"></span>
+        <button type="button" id="reset-button">Reset Timer</button>
+        <span id="end-display"></span>
+    </div>
+    <div class="form-container">
+        <!-- Input Form for Start and End Times -->
+        <form id="time-form">
+            <h2 class="instruction">
+                Please enter a valid end time below
+            </h2>
+            <div class="input-container">
+                <label for="end-time">End Time:</label>
+                <input type="datetime-local" id="end-time" required>
+            </div>
+            <h5 class="note">
+                Note: The start time will be automatically taken as the instant when you click on start
+            </h5>
+            <button type="button" id="start-button">Start Timer</button>
+        </form>
+    </div>
+    <div class="timer-container">  
+        <h1 class="countdown-heading">
+            Countdown Timer
+        </h1>
+        <!-- Timer Display -->
+        <div class="countdown">
+            <div>
+                <span id="days">00</span>
+                days
+            </div>
+            <div>
+                <span id="hours">00</span>
+                hrs
+            </div>
+            <div>
+                <span id="minutes">00</span>
+                mins
+            </div>
+            <div>
+                <span id="seconds">00</span>
+                secs
+            </div>
+        </div>
+        <h2>
+            Progress:
+        </h2>
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
